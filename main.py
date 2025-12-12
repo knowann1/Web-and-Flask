@@ -55,7 +55,7 @@ Bootstrap5(app)
 class Base(DeclarativeBase):
     pass
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DB_URL", 'sqlite:///posts.db')   
+app.config['SQLALCHEMY_DATABASE_URI'] =("postgresql://postgresql_uetc_user:ByE1viCLuOUU30PVjK9wxOFEdxBr3QCL@dpg-d4u7gea4d50c73a7k0tg-a/postgresql_uetc", 'sqlite:///posts.db')   
 db = SQLAlchemy(model_class=Base)
 db.init_app(app)
 
